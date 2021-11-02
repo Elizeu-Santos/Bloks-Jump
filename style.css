@@ -1,0 +1,47 @@
+*{
+    margin: 1000;
+    padding: 1000;
+}
+
+#game{
+    width: 800px;
+    height: 200px;
+    border: 7px solid hsl(197, 5%, 26%);
+    background-color: cadetblue;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
+    border-radius: 10px;
+}
+
+#personagem{
+    width: 35px;
+    height: 60px;
+    background-color: yellowgreen;
+    position: relative;
+    top: 140px;
+}   
+
+.animar{
+    animation: personagem 500ms infinite;
+}
+
+@keyframes personagem{
+    0%{top: 140px;}
+    100%{top: 90px;}
+    
+} 
+
+#obstacle{
+    width: 35px;
+    height: 30px;
+    background-color: rgb(168, 39, 39);
+    position: relative;
+    top: 110px;
+    left: 765px;
+    animation: obstacle 1s infinite linear;
+}
+
+@keyframes obstacle{
+    0%{left: 765px;}
+    100%{left: -7px;}
+}
