@@ -1,6 +1,6 @@
 // Variáveis para controlar Animação do Personagem/Obstacle
-let personagem = document.querySelector('#personagem')
-let obstacle = document.querySelector('#obstacle')
+const personagem = document.querySelector('#personagem')
+const obstacle = document.querySelector('#obstacle')
 
 // Movimentação do Personagem
 function pular(){
@@ -11,33 +11,21 @@ function pular(){
     setTimeout(function(){
         personagem.classList.remove('animar')
     }, 400)
-
-  /* const topoPersonagem = parseInt(
-        window.getComputedStyle(personagem).getPropertyValue('top'))
-        topoPersonagem = 90*/
 }
 
 //Colisão dos Objetos
 const testarColisao = setInterval(function(){
-
-/*const topoPersonagem = parseInt(
-    window.getComputedStyle(personagem).getPropertyValue('top')
-)
-const esquerdaObstacle = parseInt(
-    window.getComputedStyle(obstacle).getPropertyValue('left')
-)*/
-
 const ladosPersonagem = personagem.getBoundingClientRect()
 const ladosObstacle = obstacle.getBoundingClientRect()
-console.log(ladosPersonagem)
-console.log(ladosObstacle)
 
-if (!(ladosPersonagem.bottom < ladosObstacle.top || ladosObstacle.top > ladosPersonagem.bottom ||
-      ladosPersonagem.right < ladosObstacle.left || ladosObstacle.left > ladosPersonagem.right)){
+//Colosão entre Personagem e Object
+if (!(ladosPersonagem.bottom < ladosObstacle.top || ladosPersonagem.top > ladosObstacle.bottom ||
+      ladosPersonagem.right < ladosObstacle.left || ladosPersonagem.left > ladosObstacle.right)){
 
     obstacle.style.animation = 'none'  
     obstacle.style.display = 'none'
-    alert('GameOver')
+    setTimeout(() => {window.alert('gameOver')
+        
+    }, 20);
 }
 })
-
