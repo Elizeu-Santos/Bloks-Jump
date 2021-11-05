@@ -8,6 +8,6 @@ quanto mais obstáculos conseguir pular mais pontos o jogador começa a ganhar.
 
 [Click no mouse para pular e desviar do obstáculo]
 
-Apresentação: Link
+Apresentação: https://docs.google.com/presentation/d/1F4Z4fArRsrntx0KMNGfQssZTU6kKm9EPccx2toH1fMo/edit?usp=sharing
 
 Click aqui para Jogar
